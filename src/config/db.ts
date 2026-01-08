@@ -14,6 +14,7 @@ export const db = new Sequelize(
     logging: false,
     ssl: true,
     dialectOptions: {
+        
         "ssl": {
             require: true,
             rejectUnauthorized: false
