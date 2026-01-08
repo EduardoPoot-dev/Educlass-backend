@@ -1,4 +1,6 @@
 import { CorsOptions } from "cors";
+import dotenv from 'dotenv'
+dotenv.config()
 
 export const corsConfig : CorsOptions = {
     origin: function(origin, callback) {
@@ -7,9 +9,7 @@ export const corsConfig : CorsOptions = {
         if(process.argv[2] === '--api') {
             blackList.push(undefined)
         }
-console.log(blackList, origin)
         if(blackList.includes(origin)) {
-            console.log(origin)
             callback(null, true)
         } else {
             callback(new Error('Error de cors'))
