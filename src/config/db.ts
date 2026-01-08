@@ -8,14 +8,12 @@ export const db = new Sequelize(
     process.env.DB_PASSWORD,
 {
     host: process.env.DB_HOST,
-    port: +process.env.PORT,
+    port: +process.env.PORT ,
     dialect: 'postgres',
     models: [__dirname + '/../models/**/*'],
     logging: false,
-    ssl: true,
     dialectOptions: {
-        
-        "ssl": {
+        ssl: {
             require: true,
             rejectUnauthorized: false
         }
