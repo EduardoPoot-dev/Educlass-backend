@@ -7,7 +7,7 @@ export const corsConfig : CorsOptions = {
         if(process.argv[2] === '--api') {
             blackList.push(undefined)
         }
-console.log(blackList)
+console.log(blackList, origin)
         if(blackList.includes(origin)) {
             console.log(origin)
             callback(null, true)
