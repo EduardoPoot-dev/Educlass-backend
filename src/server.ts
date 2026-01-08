@@ -7,6 +7,10 @@ import submitRouter from "./routes/submitRoutes"
 import cors from "cors"
 import { corsConfig } from "./config/cors"
 
+
+
+const app = express()
+
 const connectDb = async () => {
     try {
         await db.authenticate()
@@ -17,8 +21,6 @@ const connectDb = async () => {
 }
 
 connectDb()
-
-const app = express()
 
 app.use('/api', cors(corsConfig))
 
