@@ -5,7 +5,7 @@ export const corsConfig : CorsOptions = {
         const blackList = [process.env.FRONTEND_URL]
 
         if(process.argv[2] === '--api') {
-            blackList.push(undefined)
+            return blackList.push(undefined)
         }
 
         if(blackList.includes(origin)) {
