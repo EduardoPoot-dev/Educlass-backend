@@ -21,7 +21,7 @@ connectDb()
 
 const app = express()
 
-app.use(cors(corsConfig))
+app.use('/api', cors(corsConfig))
 
 app.use(express.json());
 
