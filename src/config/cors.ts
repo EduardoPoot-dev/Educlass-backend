@@ -3,7 +3,6 @@ import { CorsOptions } from "cors";
 export const corsConfig : CorsOptions = {
     origin: function(origin, callback) {
         const blackList = [process.env.FRONTEND_URL]
-        console.log(origin, blackList)
         if(process.argv[2] === '--api') {
             blackList.push(undefined)
         }

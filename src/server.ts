@@ -10,7 +10,6 @@ import { corsConfig } from "./config/cors"
 const connectDb = async () => {
     try {
         await db.authenticate()
-        db.sync()
         console.log('DB is connceted')
     } catch (error) {
         console.log(error)
